@@ -1,6 +1,8 @@
 import requests
 import json
 import urllib
+import ssl
+ssl._create_default_https_context = ssl._create_unverified_context
 
 url = "https://apiservice.mol.gov.tw/OdService/download/A17000000J-030266-cZZ"
 urllib.request.urlretrieve(url,"result.txt")
